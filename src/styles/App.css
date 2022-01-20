@@ -1,0 +1,76 @@
+:root {
+  --todo-background: hsl(0, 0%, 97%);
+  --todo-title: hsla(230, 30%, 70%, 0.5);
+  --todo-item-border: hsla(0, 0%, 70%, 0.3);
+  --todo-counter-color: hsla(0, 0%, 30%, 0.7);
+  --box-shadow: rgba(0,0,0,.1);
+  --todo-cross-off: hsl(0, 50%, 70%);
+  --todo-cross-on: hsl(0, 100%, 50%);
+}
+
+
+.todo-container {
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.todo-title {
+  text-align: center;
+}
+
+.todo {
+  list-style-type: none;
+  background-color: var(--todo-background);
+  border-radius: 10px;
+  box-shadow: 3px 2px 7px var(--box-shadow), -3px 2px 7px var(--box-shadow);
+}
+
+.todo-title {
+  font-size: 5.3rem;
+  font-weight: 100;
+  color: var(--todo-title);
+}
+
+.todo-item {
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--todo-item-border);
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo-item > span {
+  cursor: pointer;
+}
+
+.todo-counter {
+  padding: 0.4rem 1rem;
+  font-size: 0.8rem;
+  color: var(--todo-counter-color);
+}
+
+.todo-input {
+  padding: 1rem 2rem;
+  border: 0;
+  border-bottom: 1px solid var(--todo-item-border);
+  background-color: transparent;
+  width: 100%;
+  outline: none;
+  font-size: 1.53rem;
+}
+
+.todo-input::placeholder {
+  color: var(--todo-counter-color);
+}
+
+.delete {
+  color: var(--todo-cross-off);
+  width: 12px;
+  height: 12px;
+}
+
+.delete:hover {
+  color: var(--todo-cross-on);
+  transition: color 0.3s, transform 0.3s ease-in-out;
+  transform: rotate(180deg);
+}
